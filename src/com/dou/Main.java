@@ -1,6 +1,6 @@
 package com.dou;
 
-import java.text.NumberFormat;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +9,8 @@ public class Main {
 	// write your code here
         String pID;
         Scanner input;
-        System.out.println("Enter your productID");
+        String warn="Enter your productID or type 'quit' to quit";
+        System.out.println(warn);
         input=new Scanner(System.in);
         pID=input.nextLine();
         while (!pID.equals("quit")){
@@ -19,7 +20,7 @@ public class Main {
 
             System.out.println("your ISBN:"+res);
 
-            System.out.println("Enter your productID");
+            System.out.println(warn);
             pID=input.nextLine();
         }
 
