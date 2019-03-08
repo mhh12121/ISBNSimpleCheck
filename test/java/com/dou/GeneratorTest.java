@@ -5,7 +5,7 @@ public class GeneratorTest {
     @Test
     public void testNoneNumber() {
         Generator g=new Generator();
-        String pID="abcddfafsafas";
+        String pID="abcddfafsafas-&%";
         assertEquals(null,g.generateISBN(pID));
 
     }
@@ -14,6 +14,12 @@ public class GeneratorTest {
     public void testOverflowNUmber() {
         Generator g=new Generator();
         String pID="9781400079171";
+        assertEquals(null,g.generateISBN(pID));
+    }
+    @Test
+    public void testLessNumber(){
+        Generator g=new Generator();
+        String pID="97814000791";
         assertEquals(null,g.generateISBN(pID));
     }
 }
