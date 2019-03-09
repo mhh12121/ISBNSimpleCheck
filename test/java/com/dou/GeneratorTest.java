@@ -22,4 +22,10 @@ public class GeneratorTest {
         String pID="97814000791";
         assertEquals(null,g.generateISBN(pID));
     }
+    @Test
+    public void testNormalNumber(){
+        Generator g= new Generator();
+        String pID="978140007917";
+        assertEquals("1400079179",g.generateISBN(pID));
+    }
 }

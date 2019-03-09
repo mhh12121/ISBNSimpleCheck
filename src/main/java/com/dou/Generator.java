@@ -1,5 +1,7 @@
 package com.dou;
 
+import java.util.regex.Pattern;
+
 public class Generator {
     public String generateISBN(String pID){
         if ((!isNumeric(pID)) || (pID.length()!=12)) {
@@ -23,14 +25,14 @@ public class Generator {
 
         return s.toString();
     }
-    private boolean isNumeric(String str){
-//        try{
-//            double res= Double.parseDouble(str);
-//        }catch(NumberFormatException nex){
-//            return false;
-//        }
-        return str.matches("\\d+");
-
-
+    //for mass generation usage;
+    private static final Pattern numeric=Pattern.compile("\\d+");
+    static boolean isNumeric(String s){
+        return numeric.matcher(s).matches();
     }
+//    private static boolean isNumeric(String str){
+//        return str.matches("\\d+");
+//
+//
+//    }
 }
