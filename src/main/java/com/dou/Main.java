@@ -15,13 +15,10 @@ public class Main {
         System.out.println(warn);
         input=new Scanner(System.in);
         pID=input.nextLine();
+        Generator g=new Generator();
         while (!pID.equals(quitBtn)){
-
-            Generator g=new Generator();
             String res=g.generateISBN((pID));
-
             System.out.println("your ISBN:"+res);
-
             System.out.println(warn);
             pID=input.nextLine();
         }
